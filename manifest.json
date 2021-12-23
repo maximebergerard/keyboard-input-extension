@@ -1,0 +1,28 @@
+{
+  "name": "Wavesduck fight extension",
+  "description": "Keyboard input extension for Wavesduck.com. Play this game with limited use of the mouse",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://wavesducks.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://wavesducks.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
