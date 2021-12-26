@@ -27,7 +27,7 @@ function doKeyPress(e) {
     case 86:
       const items = document.querySelectorAll(".FarmCard_root__31mb0")
       for (let i = 0; i < items.length; i++) {
-        if (items[i].innerText.includes("Mathematical")) {
+        if (items[i].innerText.includes("Black")) {
           simulate(items[i].querySelector(".FarmCard_action__1EucH"), "click")
         }
       }
@@ -41,15 +41,13 @@ function doKeyPress(e) {
       simulate(document.querySelector(".DuckList_duck__bg__XO3mi"), "click")
       console.log("Picking first duck")
       break;
-    case 188:
-      simulate(document.querySelector(".recaptcha-checkbox-checkmark"), "click")
-      console.log("Clicking captcha")
-      break;
     case 65:
+    case 81:
       simulate(document.getElementsByClassName("Hand_cards__2EyGR")[0].children[0], "click")
       console.log("Picking first card")
       break;
     case 90:
+    case 87:
       simulate(document.getElementsByClassName("Hand_cards__2EyGR")[0].children[1], "click")
       console.log("Picking second card")
       break;
@@ -85,12 +83,11 @@ function doKeyPress(e) {
       simulate(document.querySelector(".Gameplay_makeTurn__mGBeP"), "click")
       console.log("Action button")
       break;
-    case 16:
+    case 8:
       simulate(document.querySelector(".FarmCard_action__1EucH"), "click")
       console.log("Back button")
       break;
     default:
-      console.log(e.keyCode)
       break;
   }
 }
