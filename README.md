@@ -16,8 +16,8 @@ The extension is installed.
 
 | Key | Actions *before* a fight 
 | --- | ---
-| v   | Choosing a farm (by default ***BlackTurtle Farm***) 
-| n   | Choosing the ***first duck*** of the list
+| c   | Choosing a farm (by default ***BlackTurtle Farm***) 
+| v   | Choosing the ***first duck*** of the list
 
 <br>
 
