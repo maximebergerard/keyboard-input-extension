@@ -1,11 +1,11 @@
 # Wavesduck shortcut extension
 
-This extension is build to play Wavesduck fights with **a limited use of the mouse**. It's usable for `qwerty` or `azerty` keyboard user. Temporarily **numeric keypad is required** during fights to set your action points.
+This extension is build to play Wavesduck fights with **a limited use of the mouse**. It's usable for *qwerty* or *azerty* keyboard user. Temporarily **numeric keypad is required** during fights to set your action points.
 
 
 ## How to install
 
-First download this folder as a ZIP. (`Code` button -> Download ZIP) Unzipped it after this.  
+First download this folder as a ZIP. (*Code* button -> Download ZIP) Unzipped it after this.  
 Then go to [chrome://extensions/]() and check the box *Developer mode* (allow you to manually manage extension).  
 Now click on the **Load unpacked extension** button and load the unzipped folder.  
 The extension is installed.
@@ -14,16 +14,14 @@ The extension is installed.
 
 ## Shortcuts
 
-| Key | Actions `before` a fight 
+| Key | Actions *before* a fight 
 | --- | ---
-| c   | Clicking on ***choose farm button***
 | v   | Choosing a farm (by default ***BlackTurtle Farm***) 
-| b   | ***Play***      
 | n   | Choosing the ***first duck*** of the list
 
 <br>
 
-| Key        | Action `during` a fight 
+| Key        | Action *during* a fight 
 | ---        | ---
 | q / a      | Picking your ***first*** card
 | w / z      | Picking your ***second*** card
@@ -31,7 +29,7 @@ The extension is installed.
 | Enter      | ***Make turn*** / ***Next round***
 | Backspace  | Return button
 
-### Set your action points (`numeric keypad`)  
+### Set your action points (*numeric keypad*)  
 | Defense | Attack
 | :---    | ---:
 | 7 • -   | - • 9

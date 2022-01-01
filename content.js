@@ -21,24 +21,16 @@ if (window == top) {
 function doKeyPress(e) {
   switch (e.keyCode) {
     case 67:
-      simulate(document.querySelector(".ChooseFarm_action__24Yme"), "click")
-      console.log("Choosing a farm")
-      break;
-    case 86:
-      const items = document.querySelectorAll(".FarmCard_root__31mb0")
+      const items = document.querySelectorAll(".choose-collective-farm__farms__card")
       for (let i = 0; i < items.length; i++) {
         if (items[i].innerText.includes("Black")) {
-          simulate(items[i].querySelector(".FarmCard_action__1EucH"), "click")
+          simulate(items[i].querySelector("button"), "click")
         }
       }
-      console.log("Choosing mathematical farm")
+      console.log("Choosing BlackTurtle farm")
       break;
-    case 66:
-      simulate(document.querySelector(".TournamentAside_play__1KCGN"), "click")
-      console.log("Playing")
-      break;
-    case 78:
-      simulate(document.querySelector(".DuckList_duck__bg__XO3mi"), "click")
+    case 86:
+      simulate(document.querySelector(".choose-duck__ducks__card"), "click")
       console.log("Picking first duck")
       break;
     case 65:
@@ -88,6 +80,7 @@ function doKeyPress(e) {
       console.log("Back button")
       break;
     default:
+      console.log(e.keyCode)
       break;
   }
 }
