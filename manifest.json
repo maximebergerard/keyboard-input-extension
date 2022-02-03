@@ -1,6 +1,6 @@
 {
   "name": "Wavesduck fight extension",
-  "description": "Keyboard input extension for Wavesduck.com. Play this game with limited use of the mouse",
+  "description": "This extension is build to play Waves duck fights with a limited use of the mouse. It's usable for qwerty or azerty keyboard user.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
@@ -24,5 +24,8 @@
         "content.js"
       ]
     }
-  ]
+  ],
+  "icons": {
+    "128": "logo-extension.png"
+  }
 }

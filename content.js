@@ -37,40 +37,43 @@ function doKeyPress(e) {
     case 81:
       simulate(document.getElementsByClassName("Hand_cards__2EyGR")[0].children[0], "click")
       console.log("Picking first card")
+      randomizeActionButton()
       break;
     case 90:
     case 87:
       simulate(document.getElementsByClassName("Hand_cards__2EyGR")[0].children[1], "click")
       console.log("Picking second card")
+      randomizeActionButton()
       break;
     case 69:
       simulate(document.getElementsByClassName("Hand_cards__2EyGR")[0].children[2], "click")
       console.log("Picking third card")
+      randomizeActionButton()
       break;
-    case 103:
-      simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[0], "click")
-      console.log("First defense button")
-      break;
-    case 100:
-      simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[1], "click")
-      console.log("Second defense button")
-      break;
-    case 97:
-      simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[2], "click")
-      console.log("Third defense button")
-      break;
-    case 105:
-      simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[0], "click")
-      console.log("First attack button")
-      break;
-    case 102:
-      simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[1], "click")
-      console.log("Second attack button")
-      break;
-    case 99:
-      simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[2], "click")
-      console.log("Third attack button")
-      break;
+    // case 103:
+    //   simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[0], "click")
+    //   console.log("First defense button")
+    //   break;
+    // case 100:
+    //   simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[1], "click")
+    //   console.log("Second defense button")
+    //   break;
+    // case 97:
+    //   simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[2], "click")
+    //   console.log("Third defense button")
+    //   break;
+    // case 105:
+    //   simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[0], "click")
+    //   console.log("First attack button")
+    //   break;
+    // case 102:
+    //   simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[1], "click")
+    //   console.log("Second attack button")
+    //   break;
+    // case 99:
+    //   simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[2], "click")
+    //   console.log("Third attack button")
+    //   break;
     case 13:
       simulate(document.querySelector(".Gameplay_makeTurn__mGBeP"), "click")
       console.log("Action button")
@@ -124,4 +127,40 @@ function simulate(element, eventName) {
   return element;
 }
 
-simulate(document.getElementsByClassName("Hand_cards__2EyGR")[0].children[0], "click")
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  while (currentIndex != 0) {
+
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+function randomizeActionButton() {
+  let attArray = [0, 1, 2];
+  let defArray = [0, 1, 2];
+
+  attArray = shuffle(attArray);
+  defArray = shuffle(defArray);
+
+  const defPoint = parseInt(document.getElementsByClassName("TargetPoints_count__1QWDl")[0].innerText)
+  const attPoint = parseInt(document.getElementsByClassName("TargetPoints_count__1QWDl")[1].innerText)
+
+  // def actions
+  for (let i = 0; i < defPoint; i++) {
+    simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[defArray[i]], "click")
+  }
+  
+  // att actions
+  for (let i = 0; i < attPoint; i++) {
+    simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[attArray[i]], "click")
+  }
+
+  simulate(document.querySelector(".Gameplay_makeTurn__mGBeP"), "click")
+
+}
