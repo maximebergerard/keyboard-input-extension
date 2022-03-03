@@ -2,6 +2,7 @@ let eventMatchers = {
   'HTMLEvents': /^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,
   'MouseEvents': /^(?:click|dblclick|mouse(?:down|up|over|move|out))$/
 }
+
 let defaultOptions = {
   pointerX: 0,
   pointerY: 0,
@@ -155,7 +156,7 @@ function randomizeActionButton() {
   for (let i = 0; i < defPoint; i++) {
     simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[0].children[defArray[i]], "click")
   }
-  
+
   // att actions
   for (let i = 0; i < attPoint; i++) {
     simulate(document.getElementsByClassName("TargetPoints_targets__2Bq1I")[1].children[attArray[i]], "click")
